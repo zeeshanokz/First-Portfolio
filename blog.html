@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Muhammad Zeeshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: { colors: { primary: '#6366f1', secondary: '#a855f7', darkBg: '#0f172a' } }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-3 glass shadow-lg">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black gradient-text tracking-tighter">ZEESHAN.</a>
+            <div class="hidden md:flex gap-8 items-center font-medium">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="projects.html" class="hover:text-primary transition-colors">Projects</a>
+                <a href="skills.html" class="hover:text-primary transition-colors">Skills</a>
+                <a href="blog.html" class="text-primary">Blog</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden text-xl"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-xl"></i>
+                </button>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none"><i
+                    class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6">
+        <div class="container mx-auto text-center mb-16 reveal">
+            <h1 class="text-4xl md:text-7xl font-black mb-6">Latest <span class="gradient-text">Insights</span></h1>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto">Thought-leading articles on modern frontend development
+                and UI/UX design.</p>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Blog 1 -->
+                <article
+                    class="reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span
+                            class="absolute top-6 left-6 px-4 py-2 bg-primary text-white text-xs font-black rounded-xl italic">UI
+                            Design</span>
+                    </div>
+                    <div class="p-10">
+                        <div class="text-slate-400 font-bold mb-4 text-sm uppercase tracking-widest"><i
+                                class="fa-regular fa-calendar mr-2"></i> Feb 27, 2026</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Modern CSS Layout
+                            Systems</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">Mastering Flexbox and Grid to create complex,
+                            fluid layouts that adapt to any screen size without effort.</p>
+                        <a href="#"
+                            class="font-black text-primary border-b-2 border-primary/20 hover:border-primary pb-1 transition-all">READ
+                            ARTICLE</a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article
+                    class="reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4"
+                    style="transition-delay: 0.1s;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span
+                            class="absolute top-6 left-6 px-4 py-2 bg-secondary text-white text-xs font-black rounded-xl italic">Development</span>
+                    </div>
+                    <div class="p-10">
+                        <div class="text-slate-400 font-bold mb-4 text-sm uppercase tracking-widest"><i
+                                class="fa-regular fa-calendar mr-2"></i> Feb 20, 2026</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-secondary transition-colors">Why Tailwind
+                            CSS is Powerful</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">Understanding utility-first CSS and how it
+                            accelerates development cycles while maintaining design consistency.</p>
+                        <a href="#"
+                            class="font-black text-secondary border-b-2 border-secondary/20 hover:border-secondary pb-1 transition-all">READ
+                            ARTICLE</a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article
+                    class="reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4"
+                    style="transition-delay: 0.2s;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span
+                            class="absolute top-6 left-6 px-4 py-2 bg-primary text-white text-xs font-black rounded-xl italic">Design
+                            to Code</span>
+                    </div>
+                    <div class="p-10">
+                        <div class="text-slate-400 font-bold mb-4 text-sm uppercase tracking-widest"><i
+                                class="fa-regular fa-calendar mr-2"></i> Feb 15, 2026</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Convert Figma
+                            Design to Code</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">A step-by-step guide to maintaining design
+                            integrity during the development phase of your high-fidelity mockups.</p>
+                        <a href="#"
+                            class="font-black text-primary border-b-2 border-primary/20 hover:border-primary pb-1 transition-all">READ
+                            ARTICLE</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-24 pb-12 px-6 glass border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto text-center">
+            <p class="text-slate-500 font-medium">© 2026 Muhammad Zeeshan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Zeeshan | Senior Frontend Developer</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        darkBg: '#0f172a',
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100 overflow-x-hidden">
+
+    <!-- Header / Navbar -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-5 glass">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black gradient-text tracking-tighter">ZEESHAN.</a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex gap-8 items-center font-medium">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="projects.html" class="hover:text-primary transition-colors">Projects</a>
+                <a href="skills.html" class="hover:text-primary transition-colors">Skills</a>
+                <a href="blog.html" class="hover:text-primary transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden text-xl"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Btn -->
+            <div class="md:hidden flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden text-xl"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-xl"></i>
+                </button>
+                <button id="menu-btn" class="text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full glass border-t border-slate-200 dark:border-slate-800 flex-col py-6 px-6 gap-4 md:hidden animate-fade-in-down">
+            <a href="index.html" class="py-2 text-lg font-medium border-b border-white/10">Home</a>
+            <a href="about.html" class="py-2 text-lg font-medium border-b border-white/10">About</a>
+            <a href="projects.html" class="py-2 text-lg font-medium border-b border-white/10">Projects</a>
+            <a href="skills.html" class="py-2 text-lg font-medium border-b border-white/10">Skills</a>
+            <a href="blog.html" class="py-2 text-lg font-medium border-b border-white/10">Blog</a>
+            <a href="contact.html" class="py-2 text-lg font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 px-6">
+            <!-- Background Gradient -->
+            <div class="absolute top-0 left-0 w-full h-full -z-10 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 dark:opacity-20"></div>
+            <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-primary/20 rounded-full blur-[120px] -z-10 animate-float"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/20 rounded-full blur-[120px] -z-10 animate-float" style="animation-delay: -3s;"></div>
+
+            <div class="container mx-auto text-center reveal">
+                <span class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-widest mb-6 inline-block">Available for hire</span>
+                <h1 class="text-5xl md:text-8xl font-black tracking-tight mb-6 leading-tight">
+                    Hi, I'm <span class="gradient-text">Muhammad Zeeshan</span> <br> Frontend Developer
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 font-medium">
+                    Crafting premium digital experiences with modern UI/UX and high-performance code.
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <a href="projects.html" class="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-2xl font-bold transition-all transform hover:scale-105 shadow-xl shadow-primary/25">
+                        View Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#" class="px-8 py-4 glass hover:bg-white/40 dark:hover:bg-white/10 rounded-2xl font-bold transition-all border border-slate-200 dark:border-slate-800">
+                        Download Resume <i class="fa-solid fa-file-pdf ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Floating Tech Icons -->
+                <div class="mt-20 flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                    <i class="fa-brands fa-html5 text-4xl hover:text-orange-500 transition-colors cursor-pointer"></i>
+                    <i class="fa-brands fa-css3-alt text-4xl hover:text-blue-500 transition-colors cursor-pointer"></i>
+                    <i class="fa-brands fa-js text-4xl hover:text-yellow-400 transition-colors cursor-pointer"></i>
+                    <i class="fa-brands fa-react text-4xl hover:text-cyan-400 transition-colors cursor-pointer"></i>
+                    <i class="fa-brands fa-figma text-4xl hover:text-purple-500 transition-colors cursor-pointer"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-20 glass border-y border-slate-200 dark:border-slate-800">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="reveal">
+                        <div class="text-4xl md:text-6xl font-black gradient-text mb-2">5+</div>
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Years Experience</p>
+                    </div>
+                    <div class="reveal" style="transition-delay: 0.1s;">
+                        <div class="text-4xl md:text-6xl font-black gradient-text mb-2">100+</div>
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Projects Completed</p>
+                    </div>
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <div class="text-4xl md:text-6xl font-black gradient-text mb-2">50+</div>
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Happy Clients</p>
+                    </div>
+                    <div class="reveal" style="transition-delay: 0.3s;">
+                        <div class="text-4xl md:text-6xl font-black gradient-text mb-2">99%</div>
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Preview -->
+        <section class="py-24 px-6">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal">
+                    <div>
+                        <h2 class="text-4xl md:text-6xl font-black mb-4">Featured <span class="gradient-text">Work</span></h2>
+                        <p class="text-xl text-slate-500 max-w-xl">A selection of my best work in SaaS designs and complex web applications.</p>
+                    </div>
+                    <a href="projects.html" class="font-bold text-primary flex items-center gap-2 group">
+                        Browse all projects <span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal group relative overflow-hidden rounded-3xl glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800" alt="E-commerce Platform" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase">React</span>
+                                <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold rounded-lg uppercase">Tailwind</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">NextGen E-commerce</h3>
+                            <p class="text-slate-500 mb-6">A high-performance online store with seamless checkout flow and real-time inventory.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="font-bold text-sm tracking-widest border-b-2 border-primary pb-1">VIEW CASE STUDY</a>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-xl hover:text-primary transition-colors"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="text-xl hover:text-primary transition-colors"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal group relative overflow-hidden rounded-3xl glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl hover:shadow-secondary/20" style="transition-delay: 0.1s;">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="SaaS Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase">UI Design</span>
+                                <span class="px-3 py-1 bg-green-500/10 text-green-500 text-xs font-bold rounded-lg uppercase">Figma</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Analytics SaaS Pro</h3>
+                            <p class="text-slate-500 mb-6">Complex data visualization dashboard with interactive charts and real-time metrics.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="font-bold text-sm tracking-widest border-b-2 border-secondary pb-1">VIEW CASE STUDY</a>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-xl hover:text-secondary transition-colors"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="text-xl hover:text-secondary transition-colors"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal group relative overflow-hidden rounded-3xl glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/20" style="transition-delay: 0.2s;">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="Hospital Site" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase">Full Website</span>
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-500 text-xs font-bold rounded-lg uppercase">AlpineJS</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">MediCare Global</h3>
+                            <p class="text-slate-500 mb-6">Multi-page hospital website with appointment booking and doctor directory modules.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="font-bold text-sm tracking-widest border-b-2 border-primary pb-1">VIEW CASE STUDY</a>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-xl hover:text-primary transition-colors"><i class="fa-brands fa-github"></i></a>
+                                    <a href="#" class="text-xl hover:text-primary transition-colors"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-6">
+            <div class="container mx-auto">
+                <div class="relative bg-primary p-12 md:p-24 rounded-[3rem] overflow-hidden text-center reveal shadow-2xl shadow-primary/40">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px]"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-[80px]"></div>
+                    
+                    <h2 class="text-4xl md:text-7xl font-black text-white mb-8 relative z-10 leading-tight">Have a project in mind? <br> Let's build something <span class="text-secondary">amazing.</span></h2>
+                    <div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
+                        <a href="contact.html" class="px-10 py-5 bg-white text-primary hover:bg-slate-100 rounded-2xl font-black transition-all transform hover:scale-105 shadow-xl">
+                            START A CONVERSATION
+                        </a>
+                        <a href="mailto:zeeshan@example.com" class="px-10 py-5 bg-primary-dark/50 text-white border border-white/20 hover:bg-primary-dark/70 rounded-2xl font-black transition-all">
+                            HIRE ME NOW
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 px-6 glass border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-3xl font-black gradient-text mb-6 inline-block">ZEESHAN.</a>
+                    <p class="text-slate-500 mb-8 max-w-xs font-medium">Senior Frontend Developer specialized in building premium SaaS interfaces and interactive web applications.</p>
+                    <div class="flex gap-6 text-2xl">
+                        <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black mb-8 uppercase tracking-widest text-sm text-slate-400">Pages</h4>
+                    <ul class="flex flex-col gap-4 font-bold">
+                        <li><a href="index.html" class="hover:text-primary">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary">About Me</a></li>
+                        <li><a href="projects.html" class="hover:text-primary">Portfolio</a></li>
+                        <li><a href="skills.html" class="hover:text-primary">My Skills</a></li>
+                        <li><a href="blog.html" class="hover:text-primary">Latest Blogs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black mb-8 uppercase tracking-widest text-sm text-slate-400">Services</h4>
+                    <ul class="flex flex-col gap-4 font-bold">
+                        <li><a href="#" class="hover:text-primary">Frontend Dev</a></li>
+                        <li><a href="#" class="hover:text-primary">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-primary">SaaS Solutions</a></li>
+                        <li><a href="#" class="hover:text-primary">Web Performance</a></li>
+                        <li><a href="#" class="hover:text-primary">App Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black mb-8 uppercase tracking-widest text-sm text-slate-400">Newsletter</h4>
+                    <p class="text-slate-500 mb-6 font-medium">Subscribe for tech insights and updates.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Email" class="bg-slate-200 dark:bg-slate-800 px-4 py-3 rounded-xl w-full border-none focus:ring-2 focus:ring-primary">
+                        <button class="bg-primary p-4 rounded-xl text-white"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 font-medium">© 2026 Muhammad Zeeshan. All rights reserved.</p>
+                <p class="text-slate-500 font-medium">Designed with <i class="fa-solid fa-heart text-red-500"></i> in Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

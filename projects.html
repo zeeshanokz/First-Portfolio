@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Muhammad Zeeshan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: { colors: { primary: '#6366f1', secondary: '#a855f7', darkBg: '#0f172a' } }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-3 glass shadow-lg">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black gradient-text tracking-tighter">ZEESHAN.</a>
+            <div class="hidden md:flex gap-8 items-center font-medium">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="projects.html" class="text-primary">Projects</a>
+                <a href="skills.html" class="hover:text-primary transition-colors">Skills</a>
+                <a href="blog.html" class="hover:text-primary transition-colors">Blog</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-moon dark:hidden text-xl"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-xl"></i>
+                </button>
+            </div>
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none"><i
+                    class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6">
+        <div class="container mx-auto text-center mb-16 reveal">
+            <h1 class="text-4xl md:text-7xl font-black mb-6">Latest <span class="gradient-text">Projects</span></h1>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-10">A showcase of my recent work in SaaS, E-commerce,
+                and Custom Web Solutions.</p>
+
+            <!-- Filtering Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button data-filter="all"
+                    class="filter-btn px-6 py-3 rounded-2xl font-black transition-all bg-primary text-white shadow-lg">All
+                    Works</button>
+                <button data-filter="react"
+                    class="filter-btn px-6 py-3 rounded-2xl font-black transition-all glass border border-slate-200 dark:border-slate-800 hover:bg-primary/10">React</button>
+                <button data-filter="full-website"
+                    class="filter-btn px-6 py-3 rounded-2xl font-black transition-all glass border border-slate-200 dark:border-slate-800 hover:bg-primary/10">Full
+                    Website</button>
+                <button data-filter="ui-design"
+                    class="filter-btn px-6 py-3 rounded-2xl font-black transition-all glass border border-slate-200 dark:border-slate-800 hover:bg-primary/10">UI
+                    Design</button>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project 1 (Already in index, but repeated for completeness) -->
+                <div class="project-card reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/20"
+                    data-category="react">
+                    <div class="h-64 overflow-hidden"><img
+                            src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4"><span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase">React</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">E-commerce Platform</h3>
+                        <p class="text-slate-500 mb-6">Full-featured online store with React and Redux state management.
+                        </p>
+                        <div class="flex justify-between items-center"><a href="#"
+                                class="font-black text-sm text-primary">LIVE DEMO</a><a href="#"
+                                class="text-xl hover:text-primary"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl hover:shadow-secondary/20"
+                    data-category="ui-design">
+                    <div class="h-64 overflow-hidden"><img
+                            src="https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4"><span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold rounded-lg uppercase">UI
+                                Design</span></div>
+                        <h3 class="text-2xl font-bold mb-3">SaaS Dashboard UI</h3>
+                        <p class="text-slate-500 mb-6">Interactive dashboard for analytics SaaS, designed in Figma and
+                            coded in Tailwind.</p>
+                        <div class="flex justify-between items-center"><a href="#"
+                                class="font-black text-sm text-secondary">LIVE DEMO</a><a href="#"
+                                class="text-xl hover:text-secondary"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl"
+                    data-category="full-website">
+                    <div class="h-64 overflow-hidden"><img
+                            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4"><span
+                                class="px-3 py-1 bg-green-500/10 text-green-500 text-xs font-bold rounded-lg uppercase">Full
+                                Website</span></div>
+                        <h3 class="text-2xl font-bold mb-3">School Management</h3>
+                        <p class="text-slate-500 mb-6">Complete web portal for schools with student and teacher
+                            management modules.</p>
+                        <div class="flex justify-between items-center"><a href="#"
+                                class="font-black text-sm text-green-500">LIVE DEMO</a><a href="#"
+                                class="text-xl hover:text-green-500"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl"
+                    data-category="full-website">
+                    <div class="h-64 overflow-hidden"><img
+                            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4"><span
+                                class="px-3 py-1 bg-blue-500/10 text-blue-500 text-xs font-bold rounded-lg uppercase">Full
+                                Website</span></div>
+                        <h3 class="text-2xl font-bold mb-3">Hospital Website</h3>
+                        <p class="text-slate-500 mb-6">Modern medical center website with appointment booking
+                            functionality.</p>
+                        <div class="flex justify-between items-center"><a href="#"
+                                class="font-black text-sm text-blue-500">LIVE DEMO</a><a href="#"
+                                class="text-xl hover:text-blue-500"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl"
+                    data-category="react">
+                    <div class="h-64 overflow-hidden"><img
+                            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4"><span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase">React</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Real Estate Platform</h3>
+                        <p class="text-slate-500 mb-6">Property listing application with advanced search and map
+                            integration features.</p>
+                        <div class="flex justify-between items-center"><a href="#"
+                                class="font-black text-sm text-primary">LIVE DEMO</a><a href="#"
+                                class="text-xl hover:text-primary"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal group overflow-hidden rounded-[2.5rem] glass border border-slate-200 dark:border-slate-800 transition-all hover:-translate-y-4 hover:shadow-2xl"
+                    data-category="react">
+                    <div class="h-64 overflow-hidden"><img
+                            src="https://images.unsplash.com/photo-14997503101ec2-19137494439c?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4"><span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase">React</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Personal Blog CMS</h3>
+                        <p class="text-slate-500 mb-6">Custom content management system for blogs, built with React and
+                            Markdown support.</p>
+                        <div class="flex justify-between items-center"><a href="#"
+                                class="font-black text-sm text-primary">LIVE DEMO</a><a href="#"
+                                class="text-xl hover:text-primary"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-24 pb-12 px-6 glass border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto text-center">
+            <p class="text-slate-500 font-medium">© 2026 Muhammad Zeeshan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
